@@ -23,7 +23,7 @@ class _ClockHomePage extends StatelessWidget {
 
   _pickImage() async {
     var imageFile = await ImagePicker.pickImage(source: ImageSource.gallery);
-    _key.currentState.imageFile = imageFile;
+    if (imageFile != null) _key.currentState.imageFile = imageFile;
   }
 
   @override
