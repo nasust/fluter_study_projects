@@ -22,7 +22,7 @@ class ClockWidgetState extends State<ClockWidget> {
   }
 
   void _initTimer() {
-    Timer.periodic(Duration(milliseconds: 100),
+    Timer.periodic(Duration(milliseconds: 33),
         (Timer timer) => setState(() => _nowTime = DateTime.now()));
   }
 
