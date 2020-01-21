@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/widgets.dart';
 
 import 'file_inherited_widget.dart';
@@ -9,11 +7,11 @@ class WallpaperWidget extends StatefulWidget {
 
   @override
   State<WallpaperWidget> createState() {
-    return WallpaperWidgetState();
+    return _WallpaperWidgetState();
   }
 }
 
-class WallpaperWidgetState extends State<WallpaperWidget> {
+class _WallpaperWidgetState extends State<WallpaperWidget> {
   @override
   Widget build(BuildContext context) {
     var imageFile = FileInheritedWidget.of(context).file;
