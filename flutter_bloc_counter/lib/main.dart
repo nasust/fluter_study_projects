@@ -27,7 +27,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
   final _bloc = CounterBloc();
 
   @override
@@ -50,14 +49,15 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             StreamBuilder<int>(
-                stream: _bloc.counter,
-                initialData: 0,
-                builder: (context, snapshot) {
-                  return Text(
-                    '${snapshot.data}',
-                    style: Theme.of(context).textTheme.display1,
-                  );
-                },),
+              stream: _bloc.counter,
+              initialData: 0,
+              builder: (context, snapshot) {
+                return Text(
+                  '${snapshot.data}',
+                  style: Theme.of(context).textTheme.display1,
+                );
+              },
+            ),
           ],
         ),
       ),
