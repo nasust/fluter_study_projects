@@ -13,7 +13,7 @@ class CounterBloc {
   }
 
   Sink<void> get increment => _incrementController.sink;
-  Stream<void> get counter => _countController.stream;
+  Stream<int> get counter => _countController.stream;
 
   void dispose() async {
     await _incrementController.close();
